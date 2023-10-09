@@ -40,7 +40,7 @@ apt install -y mysql-server
 
 **Instal·lació de les llibreries**
 
-apt install -y php libapache2-mod-php
+apt install -y php libapache2-mod-php7.4
 
 apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
 
@@ -51,23 +51,30 @@ systemctl restart apache2
 ## MySQL
 
 Base de dades MySQL
-Per a començar a instalar la base de dades MySQL anirem a la terminal i executarem la comanda indicada a continuació:
 
-root@elpuig:~$ mysql
-Creació de la base de dades:
-una vegada dins de mysql instalarem la base de dades amb la següent comanda i amb el nom que vulguis
+**Pera empezar a instalar la base de datos de MySQL iremos a la terminal i ejecutaremos este comando:**
+
+mysql
+
+## Creació de la base de dades:
+
+**una vegada dins de mysql instalarem la base de dades amb la següent comanda i amb el nom que vulguis**
 
 CREATE DATABASE bbdd;
-Creació de usuari
-Per accedir a la base de dades es tindrà que crear un usuari perquè l'aplicació pugui identificar la IP
 
-CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+Creació de usuari
+
+**Per accedir a la base de dades es tindrà que crear un usuari perquè l'aplicació pugui identificar la IP**
+
+**CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 GRANT ALL ON bbdd.* to 'usuario'@'localhost';
 exit
 Probem la connexió a la base de dades
-Verifiquem si la connexió amb la base de dades s’ha fet correctament amb la següent comanda:
 
-alumne@elpuig:~$ mysql -u usuario -p
+**Verifiquem si la connexió amb la base de dades s’ha fet correctament amb la següent comanda:**
+
+mysql -u usuario -p
+
 Arxiu zip
 Pasar l’arxiu zip
 Descarregarem el zip de la nostra aplicació (en aquest cas de nextcloud) i la introduirem en el directori /vagrant/ per a moure'l a /var/www/html/:
