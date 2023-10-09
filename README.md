@@ -62,21 +62,25 @@ mysql
 
 CREATE DATABASE bbdd;
 
-Creació de usuari
+## Creació de usuari
 
 **Per accedir a la base de dades es tindrà que crear un usuari perquè l'aplicació pugui identificar la IP**
 
-**CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 GRANT ALL ON bbdd.* to 'usuario'@'localhost';
+
 exit
+
 Probem la connexió a la base de dades
 
 **Verifiquem si la connexió amb la base de dades s’ha fet correctament amb la següent comanda:**
 
 mysql -u usuario -p
 
-Arxiu zip
-Pasar l’arxiu zip
+## Arxiu zip
+
+*Pasar l’arxiu zip
+
 Descarregarem el zip de la nostra aplicació (en aquest cas de nextcloud) i la introduirem en el directori /vagrant/ per a moure'l a /var/www/html/:
 
 alumne@elpuig:~$ mv /vagrant/arxiu.zip /var/www/html/
@@ -87,13 +91,22 @@ apt install zip
 Després utilitzarem unzip per descomprimirlo.
 
 Permisos per la web
-Per evitar errors deberiem copiar el zip amb cp -r si esta també amb un altre directori y eliminar el director amb rm -r. Per donar permisos anirem al directori /var/www/html i posarem les següents comandes.
+Per evitar errors deberiem copiar el zip amb cp -r si esta també amb un altre directori y eliminar el director amb rm -r. Per donar permisos anirem al directori /var/www/html i posarem les següents comandes.1
 
 cd /var/www/html
 chmod -R 775 .
 chown -R root:www-data .
 Red pública
-Per fer la nostra red en publica anirem a vagrantfile y indicarem la següent comanda per fer visible el servidor i activar la pubic network
+Per fer la nostra red en publica anirem a vagrantfile y indicarem la següent comanda per fer visible el servidor i activar la pubic network0
 
 config.vm.network "forwarded_port", guest: 80, host: 8080
 config.vm.network "public_network"
+
+
+
+
+
+Si llegaste hasta aca significa que instalaste correctamente OwnCloud asi que eres un lapis elite
+
+![Lapis elite](https://www.informador.mx/__export/1655757092506/sites/elinformador/img/2022/06/20/whatsapp_image_2022-06-20_at_2_57_00_pm_crop1655756759109.jpeg_1902800913.jpeg)
+
