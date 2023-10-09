@@ -2,42 +2,54 @@
 
 ## Creacion de Vagrant
 
-Crea una carpeta para trabajar en la instalacion:
+**Crea una carpeta para trabajar en la instalacion:**
 
-**mkdir**
+mkdir
 
-**cd al directorio creado**
+cd al directorio creado
 
-Tenemos que trabajar en ese directorio y tendremos que crear vagrant, lo haremos con el siguiente comando:
+**Tenemos que trabajar en ese directorio y tendremos que crear vagrant, lo haremos con el siguiente comando:**
 
-**vagrant init ubuntu/jammy64**
+vagrant init ubuntu/jammy64
 
-Ara muntarem la màquina amb la comanda vagrant up:
+**Ara muntarem la màquina amb la comanda vagrant up:**
 
 vagrant up --provider=virtualbox
 
-Ahora podrem fer vagrant ssh per a conectarnos a nostra maquina.
+**Ahora podremos hacer un ssh para conectarnos a nuestra maquina**
 
-**vagrant ssh**
+vagrant ssh
 
-Instal·lació de les aplicacions necesaries
-Per a començar la instal·lació de NextCloud primer necessitarem unes aplicacions necessàries com apache2, mysql i algunes llibreries per continuar, quan instal·lem apache es crea automáticamente un directorio que es el servidor web que utiliza apache2.
+## Instal·lació de les aplicacions necesaries
+
+**Per a començar la instal·lació de NextCloud primer necessitarem unes aplicacions necessàries com apache2, mysql i algunes llibreries per continuar, quan instal·lem apache es crea automáticamente un directorio que es el servidor web que utiliza apache2.**
 
 ## Instal·lació d'apache2, mysql i llibreries
 
-Actualitzar la consola.
+**Actualitzar la consola**
+
 apt update
-apt upgrade
-Instal·lar apache2.
+
+**Instal·lar apache2**
+
 apt install -y apache2
-Instal·lar mysql-server.
+
+**Instal·lar mysql-server**
+
 apt install -y mysql-server
-Instal·lació de les llibreries.
+
+**Instal·lació de les llibreries**
+
 apt install -y php libapache2-mod-php
+
 apt install -y php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
-Reiniciar el servidor
+
+**Reiniciar el servidor**
+
 systemctl restart apache2
-MySQL
+
+## MySQL
+
 Base de dades MySQL
 Per a començar a instalar la base de dades MySQL anirem a la terminal i executarem la comanda indicada a continuació:
 
