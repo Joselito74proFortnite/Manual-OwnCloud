@@ -82,7 +82,7 @@ mysql -u usuario -p
 
 ## Pasar l’arxiu zip
 
-*[Descarga de Owncloud](https://download.owncloud.com/ocis/ocis/stable/4.0.0/)
+*[Descarga de Owncloud](https://download.owncloud.com/server/stable/owncloud-complete-20230906.zip)
 
 ***Descargamos el zip de nuestra aplicacion (si nos toca nextcloud pues el zip de nextcloud) y la meteremos en /vagrant/ para moverlo a  /var/www/html/:**
 
