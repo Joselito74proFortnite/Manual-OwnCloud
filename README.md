@@ -82,6 +82,8 @@ mysql -u usuario -p
 
 ## Pasar l’arxiu zip
 
+*[Descarga de Owncloud](https://download.owncloud.com/ocis/ocis/stable/4.0.0/)
+
 ***Descargamos el zip de nuestra aplicacion (si nos toca nextcloud pues el zip de nextcloud) y la meteremos en /vagrant/ para moverlo a  /var/www/html/:**
 
 mv /vagrant/arxiu.zip /var/www/html/
@@ -101,9 +103,12 @@ Ejemplo: unzip blablabla
 Per evitar errors deberiem copiar el zip amb cp -r si esta també amb un altre directori y eliminar el director amb rm -r. Per donar permisos anirem al directori /var/www/html i posarem les següents comandes.1
 
 cd /var/www/html
+
 chmod -R 775 .
+
 chown -R root:www-data .
-Red pública
+
+## Red pública
 Per fer la nostra red en publica anirem a vagrantfile y indicarem la següent comanda per fer visible el servidor i activar la pubic network0
 
 config.vm.network "forwarded_port", guest: 80, host: 8080
