@@ -1,24 +1,30 @@
 # Manual-OwnCloud
 
-Vagrant és una eina per a la creació i el treball amb entorns de desenvolupament
+##Creacion de Vagrant
 
-Per a començar la instal·lació necessitarem crear un directori on sigui per a treballar en aquest directori.
+Crea una carpeta para trabajar en la instalacion:
 
-[alumne@elpuig ~]$ mkdir ejemplo
-[alumne@elpuig ~]$ cd ejemplo/
-Treballarem dins del directori creat anteriorment, per a crear vagrant introduirem la seguent comanda.
+**mkdir**
 
-[alumne@elpuig example]$ vagrant init ubuntu/jammy64
+**cd al directorio creado**
+
+Tenemos que trabajar en ese directorio y tendremos que crear vagrant, lo haremos con el siguiente comando:
+
+**vagrant init ubuntu/jammy64**
+
 Ara muntarem la màquina amb la comanda vagrant up:
 
-[alumne@elpuig example]$ vagrant up --provider=virtualbox
+vagrant up --provider=virtualbox
+
 Ahora podrem fer vagrant ssh per a conectarnos a nostra maquina.
 
-[alumne@elpuig example]$ vagrant ssh
+**vagrant ssh**
+
 Instal·lació de les aplicacions necesaries
 Per a començar la instal·lació de NextCloud primer necessitarem unes aplicacions necessàries com apache2, mysql i algunes llibreries per continuar, quan instal·lem apache es crea automáticamente un directorio que es el servidor web que utiliza apache2.
 
-Instal·lació d'apache2, mysql i llibreries
+##Instal·lació d'apache2, mysql i llibreries
+
 Actualitzar la consola.
 apt update
 apt upgrade
