@@ -1,6 +1,6 @@
 # Manual-OwnCloud
 
-##Creacion de Vagrant
+## Creacion de Vagrant
 
 Crea una carpeta para trabajar en la instalacion:
 
@@ -23,7 +23,7 @@ Ahora podrem fer vagrant ssh per a conectarnos a nostra maquina.
 Instal·lació de les aplicacions necesaries
 Per a començar la instal·lació de NextCloud primer necessitarem unes aplicacions necessàries com apache2, mysql i algunes llibreries per continuar, quan instal·lem apache es crea automáticamente un directorio que es el servidor web que utiliza apache2.
 
-##Instal·lació d'apache2, mysql i llibreries
+## Instal·lació d'apache2, mysql i llibreries
 
 Actualitzar la consola.
 apt update
