@@ -90,7 +90,7 @@ mv /vagrant/arxiu.zip /var/www/html/
 
 ## Descomprimir el Zip
 
-**Instalamos Zip:**
+**Instalamos Zip:***
 
 apt install zip
 
@@ -100,7 +100,9 @@ Ejemplo: unzip blablabla
 
 ## Permisos per la web
 
-Per evitar errors deberiem copiar el zip amb cp -r si esta també amb un altre directori y eliminar el director amb rm -r. Per donar permisos anirem al directori /var/www/html i posarem les següents comandes.1
+**Per evitar errors deberiem copiar el zip amb cp -r si esta també amb un altre directori y eliminar el director amb rm -r.
+
+Per donar permisos anirem al directori /var/www/html i posarem les següents comandes**
 
 cd /var/www/html
 
@@ -109,11 +111,20 @@ chmod -R 775 .
 chown -R root:www-data .
 
 ## Red pública
-Per fer la nostra red en publica anirem a vagrantfile y indicarem la següent comanda per fer visible el servidor i activar la pubic network0
+
+**Per fer la nostra red en publica anirem a vagrantfile y indicarem la següent comanda per fer visible el servidor i activar la pubic network0**
 
 config.vm.network "forwarded_port", guest: 80, host: 8080
+
 config.vm.network "public_network"
 
+**Despues de poner ese comando pon el siguiente comando**
+
+vagrant reload
+
+ssh vagrant
+
+**Ahora cojes la ip del ssh y la pegas en tu navegador y haces toda la paranoia de el usuario y la contraseña**
 
 **Si llegaste hasta aca significa que instalaste correctamente OwnCloud asi que eres un lapis elite**
 
